@@ -1,0 +1,17 @@
+{
+  "name": "itcs212-project1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rayriffy/itcs212-project1.git",
+  "author": "Phumrapee Limpianchop <git@rayriffy.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "stylus": "^0.54.7"
+  }
+}
