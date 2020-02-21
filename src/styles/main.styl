@@ -1,0 +1,53 @@
+@import './commons'
+
+html
+  height 100%
+
+body
+  getFont(theme: theme)
+  getBackground(theme)
+  height 100%
+  margin 0
+
+h1, h2, h3, h4, h5, h6
+  margin 0
+
+a
+  text-decoration none
+
+.flex
+  display flex
+  justify-content center
+  padding 40px 20px
+
+.container
+  width 60%
+
+.container > .nav
+  display flex
+  align-items center
+
+.container > .nav > .spacer
+  margin 0 auto
+  
+.container > .nav > .links
+  display flex
+  flex-wrap wrap
+
+.container > .nav > .links > .button
+  getCard(theme, 'flat', 50)
+  padding 10px 20px
+  margin 0 10px
+  
+.container > .nav > .links > .button:hover
+  getCard(theme, 'pressed', 50)
+
+.container > .nav > .links > .active
+  getCard(theme, 'concave', 50)
+
+.container > .nav > .links > .button > a
+  font-weight 500
+  color #1a202c
+
+.container > .content
+  padding 60px 0 0 0
