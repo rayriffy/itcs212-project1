@@ -3,47 +3,27 @@ getBackground(theme = 'light')
     background-color #ecf0f3
   else if theme == 'dark'
     background-color #2f3338
-
-getShadow(size, colorSet, isInset = false)
-  if isInset
-    box-shadow inset (size / 10)px (size / 10)px (size / 5)px colorSet[0], inset (size / 10 * -1)px (size / 10 * -1)px (size / 5)px colorSet[1]
+    
+getColor(theme = 'dark', invert = false)
+  if theme == 'dark'
+    if invert
+      (#1a202c)
+    else
+      (rgba(255, 255, 255, 0.92))
   else
-    box-shadow (size / 10)px (size / 10)px (size / 5)px colorSet[0], (size / 10 * -1)px (size / 10 * -1)px (size / 5)px colorSet[1]
-
-getCard(theme = 'light', shape = 'flat', size = 300, borderRadius = 50px)
-  border-radius borderRadius
-  if theme == 'light'
-    getShadow(size, #c9cccf #ffffff, shape == 'pressed')
-    if shape == 'flat'
-      background #ecf0f3
-    else if shape == 'concave'
-      background linear-gradient(145deg, #d4d8db, #fdffff)
-    else if shape == 'convex'
-      background linear-gradient(145deg, #fdffff, #d4d8db)
-    else if shape == 'pressed'
-      background #ecf0f3
-  else if theme == 'dark'
-    getShadow(size, #282b30 #363b40, shape == 'pressed')
-    if shape == 'flat'
-      background #2f3338
-    else if shape == 'concave'
-      background linear-gradient(145deg, #32373c, #2a2e32)
-    else if shape == 'convex'
-      background linear-gradient(145deg, #2a2e32, #32373c)
-    else if shape == 'pressed'
-      background #2f3338
+    if invert
+      (rgba(255, 255, 255, 0.92))
+    else
+      (#1a202c)
 
 getFont(style = 'body', theme = 'light')
   font-family 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
   if style == 'heading'
     line-height 1.25
     font-weight bold
-  if theme == 'dark'
-    color rgba(255, 255, 255, 0.92)
-  else
-    color #1a202c
+  color getColor(theme)
 
-getShadow(weight)
+getShadow(weight = '')
   if weight == 'xs'
     box-shadow 0 0 0 1px rgba(0, 0, 0, 0.05)
   else if weight == 'sm'
@@ -58,6 +38,5 @@ getShadow(weight)
     box-shadow 0 25px 50px -12px rgba(0, 0, 0, 0.25)
   else
     box-shadow 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
-  
 
 theme='light'

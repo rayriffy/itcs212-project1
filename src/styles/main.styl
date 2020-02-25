@@ -25,41 +25,44 @@ body > .flex
 
 .container
   width 60%
+  @media screen and (max-width: 700px)
+    width 80%
+  @media screen and (max-width: 480px)
+    width 100%
 
 .container > div.nav
   display flex
   align-items center
   font-size 20px
+  @media screen and (max-width: 520px)
+    display block
+  & > h1
+    padding-left calc(0.5rem + 10px)
+  & > .spacer
+    margin 0 auto
+  & > .links
+    display flex
+    & > .button
+      padding 0 0.5rem
+      & > a
+        font-weight 500
+        font-size 16px
+        padding 5px 10px
+        transition all 0.2s cubic-bezier(0.23, 1, 0.32, 1)
+        text-transform uppercase
+        border-radius 999px
+        color getColor(theme)
+        &:hover
+          background getColor(theme)
+          color getColor(theme, true)
+    & > .active > a
+      transition all 0.2s cubic-bezier(0.23, 1, 0.32, 1)
+      color getColor(theme, true)
+      background getColor(theme)
+      &:hover
+        background transparent
+        color getColor(theme)
 
-.container > div.nav > .spacer
-  margin 0 auto
-  
-.container > div.nav > .links
-  display flex
-
-.container > div.nav > .links > .button
-  padding 0 0.5rem
-
-.container > div.nav > .links > .button > a
-  color black
-  font-weight 500
-  font-size 16px
-  padding 5px 10px
-  transition all 0.2s cubic-bezier(0.23, 1, 0.32, 1)
-  text-transform uppercase
-  border-radius 999px
-  if(theme=='light')
-    color black
-  else
-    color white
-
-.container > div.nav > .links > .button > a:hover
-  if(theme=='light')
-    background black
-    color white
-  else
-    background white
-    color black
 
 .container > div.content
   padding 20px 0
