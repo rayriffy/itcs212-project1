@@ -2,51 +2,44 @@
   
 .content > .teams
   padding 20px 0 0 0
-  
-.content > .teams > .flex
-  display flex
-  justify-content center
-
-.content > .teams > .flex > h1
-  text-align center
-  border-bottom 5px solid
-  border-color getColor(theme)
-  
-.content > .teams > .people
-  display flex
-  justify-content center
-  align-items center
-  flex-wrap wrap
-  padding-top 20px
-
-.content > .teams > .people > .person
-  width 32%
-  padding 20px
-  @media screen and (max-width: 800px)
-    width 40%
-  @media screen and (max-width: 440px)
-    width 70%
-
-.content > .teams > .people > .person > .card
-  getShadow('xl')
-  background getColor(theme, true)
-  border-radius 20px
-  overflow hidden
-  transition all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
-  &:hover
-    transform scale(1.05)
-  & > img
-    width 100%
-    height auto
-  & > .meta
-    padding 15px 20px
-    & > .socialBar
-      padding 15px 0 0 0
-      display flex
-      justify-content center
-      margin 0
-      & > li
-        list-style none
-        padding 0 10px
-        
-
+  & > .flex
+    display flex
+    justify-content center
+    & > h1
+      text-align center
+      border-bottom 5px solid
+      border-color getColor(theme)
+  & > .people
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    padding-top 20px
+    & > .person
+      width 32%
+      padding 20px
+      @media screen and (max-width: 800px)
+        width 40%
+      @media screen and (max-width: 440px)
+        width 70%
+      & > .card
+        getShadow('xl')
+        background getColor(theme, true)
+        border-radius 20px
+        overflow hidden
+        transition all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+        &:hover
+          transform scale(1.05)
+        & > img
+          width 100%
+          height auto
+        & > .meta
+          padding 15px 20px
+          & > .socialBar
+            padding 15px 0 0 0
+            display flex
+            justify-content center
+            margin 0
+            & > li
+              list-style none
+              padding 0 10px

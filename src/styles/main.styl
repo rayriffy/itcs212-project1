@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6
   margin 0
 
 a
+  color getColor(theme)
   text-decoration none
   
 nav
@@ -30,21 +31,23 @@ body > .flex
   @media screen and (max-width: 480px)
     width 100%
 
-.container > div.nav
+.container > .nav
   display flex
   align-items center
   font-size 20px
+  & > h1
+    padding 0 15px 0 0
   @media screen and (max-width: 520px)
     display block
     & > h1
-      padding-left calc(0.5rem + 10px)
-      padding-bottom 15px
+      padding 0 0 15px calc(0.5rem + 10px)
   & > .spacer
     margin 0 auto
   & > .links
     display flex
+    flex-wrap wrap
     & > .button
-      padding 0 0.5rem
+      padding 0.25rem 0.5rem
       & > a
         font-weight 500
         font-size 16px
@@ -65,5 +68,5 @@ body > .flex
         color getColor(theme)
 
 
-.container > div.content
+.container > .content
   padding 20px 0
