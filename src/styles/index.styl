@@ -4,24 +4,25 @@
   display flex
   justify-content space-between
   align-items center
+  padding-top 30px
 
 .content > .hero > .text
   width 30%
   padding 0 40px 0 0
 
 .content > .hero > .text > h2
-  font-size 36px
+  font-size 32px
   line-height 1.2
 
 .content > .hero > .text > .action
   padding 30px 0 0 0
 
 .content > .hero > .text > .action > a
-  padding 15px 25px
+  padding 15px 20px
   getFont(theme: theme)
   getCard(theme, 'flat', 200)
   font-weight 500
-  font-size 16px
+  font-size 14px
   text-transform uppercase
 
 .content > .hero > .image
@@ -32,3 +33,46 @@
   height auto
   getCard(theme, 'flat')
   border-radius 20px
+  
+.content > .teams
+  padding 100px 0 0 0
+  
+.content > .teams > .flex
+  display flex
+  justify-content center
+
+.content > .teams > .flex > h1
+  text-align center
+  border-bottom 5px solid black
+  
+.content > .teams > .people
+  display flex
+  justify-content center
+  align-items center
+  flex-wrap wrap
+
+.content > .teams > .people > .person
+  width (1 * 100 / 3)%
+  padding 20px
+
+.content > .teams > .people > .person > .card
+  getShadow('xl')
+  background white
+  border-radius 20px
+  overflow hidden
+  transition all 0.3s cubic-bezier(0.19, 1, 0.22, 1)
+  &:hover
+    transform scale(1.05)
+  & > img
+    width 100%
+    height auto
+  & > .meta
+    padding 15px 20px
+    & > .socialBar
+      padding-top 15px
+      display flex
+      justify-content center
+      & > i
+        padding 0 10px
+        
+
