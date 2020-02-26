@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "parcel src/*.html",
+    "dev": "parcel src/index.html",
     "build": "parcel build src/*.html",
     "deploy": "netlify deploy --dir=./dist --prod"
   },
