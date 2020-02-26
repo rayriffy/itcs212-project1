@@ -69,4 +69,26 @@ body > .flex
 
 
 .container > .content
-  padding 20px 0
+  padding 20px 0 calc(20px + 60px) 0
+
+.footer
+  position fixed
+  bottom 0
+  left 0
+  right 0
+  display flex
+  justify-content center
+  & > .box
+    height 60px
+    border-radius 20px 20px 0 0
+    getColor(theme, background)
+    getColor(theme, color, true)
+    font-size 14px
+    display flex
+    justify-content center
+    align-items center
+    width 60%
+    @media screen and (max-width: 700px)
+      width 80%
+    @media screen and (max-width: 480px)
+      width 100%

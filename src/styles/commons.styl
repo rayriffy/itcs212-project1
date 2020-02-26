@@ -30,12 +30,12 @@ getColor(theme = 'dark', property, invert = false)
       @media (prefers-color-scheme: dark)
         add-property(property, white)
 
-getFont(style = 'body', theme = 'light')
+getFont(style = 'body', theme = 'light', invert = false)
   font-family 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
   if style == 'heading'
     line-height 1.25
     font-weight bold
-  getColor(theme, color)
+  getColor(theme, color, invert)
 
 getShadow(weight = '')
   if weight == 'xs'
@@ -53,4 +53,4 @@ getShadow(weight = '')
   else
     box-shadow 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
 
-theme = 'light'
+theme = 'dark'
