@@ -1,27 +1,41 @@
 getBackground(theme = 'light')
   if theme == 'light'
     background-color #ecf0f3
+    @media (prefers-color-scheme: dark)
+      background-color #2f3338
   else if theme == 'dark'
     background-color #2f3338
+    @media (prefers-color-scheme: dark)
+      background-color #ecf0f3
     
-getColor(theme = 'dark', invert = false)
+getColor(theme = 'dark', property, invert = false)
+  white = rgba(255, 255, 255, 0.92)
+  black = #1a202c
   if theme == 'dark'
     if invert
-      (#1a202c)
+      add-property(property, black)
+      @media (prefers-color-scheme: dark)
+        add-property(property, white)
     else
-      (rgba(255, 255, 255, 0.92))
+      add-property(property, white)
+      @media (prefers-color-scheme: dark)
+        add-property(property, black)
   else
     if invert
-      (rgba(255, 255, 255, 0.92))
+      add-property(property, white)
+      @media (prefers-color-scheme: dark)
+        add-property(property, black)
     else
-      (#1a202c)
+      add-property(property, black)
+      @media (prefers-color-scheme: dark)
+        add-property(property, white)
 
 getFont(style = 'body', theme = 'light')
   font-family 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
   if style == 'heading'
     line-height 1.25
     font-weight bold
-  color getColor(theme)
+  getColor(theme, color)
 
 getShadow(weight = '')
   if weight == 'xs'
@@ -39,4 +53,4 @@ getShadow(weight = '')
   else
     box-shadow 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
 
-theme='light'
+theme = 'light'

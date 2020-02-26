@@ -8,7 +8,7 @@
     & > h1
       text-align center
       border-bottom 5px solid
-      border-color getColor(theme)
+      getColor(theme, border-color)
   & > .people
     display flex
     justify-content center
@@ -24,7 +24,7 @@
         width 70%
       & > .card
         getShadow('xl')
-        background getColor(theme, true)
+        getColor(theme, background, true)
         border-radius 20px
         overflow hidden
         transition all 0.3s cubic-bezier(0.19, 1, 0.22, 1)

@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6
   margin 0
 
 a
-  color getColor(theme)
+  getColor(theme, color)
   text-decoration none
   
 nav
@@ -55,17 +55,17 @@ body > .flex
         transition all 0.2s cubic-bezier(0.23, 1, 0.32, 1)
         text-transform uppercase
         border-radius 999px
-        color getColor(theme)
+        getColor(theme, color)
         &:hover
-          background getColor(theme)
-          color getColor(theme, true)
+          getColor(theme, background)
+          getColor(theme, color, true)
     & > .active > a
       transition all 0.2s cubic-bezier(0.23, 1, 0.32, 1)
-      color getColor(theme, true)
-      background getColor(theme)
+      getColor(theme, color, true)
+      getColor(theme, background)
       &:hover
         background transparent
-        color getColor(theme)
+        getColor(theme, color)
 
 
 .container > .content

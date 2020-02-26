@@ -27,14 +27,15 @@
         font-size 14px
         text-transform uppercase
         border-radius 99px
-        background getColor(theme)
-        color getColor(theme, true)
+        getColor(theme, background)
+        getColor(theme, color, true)
         transition all 0.4s cubic-bezier(0.23, 1, 0.32, 1)
         &:hover
           background transparent
-          color getColor(theme)
+          getColor(theme, color)
           padding calc(15px - 3px) calc(20px - 3px)
-          border 3px solid getColor(theme)
+          border 3px solid
+          getColor(theme, border-color)
   & > .image
     width 60%
     @media screen and (max-width: 950px)
@@ -46,7 +47,7 @@
       overflow hidden
       border-radius 20px
       object-fit cover
-      getShadow()
+      getShadow('2xl')
       @media screen and (max-width: 1400px)
         height 200px
       @media screen and (max-width: 520px)
