@@ -14,7 +14,7 @@ const teams = [
   }
 ];
 
-window.addEventListener("DOMContentLoaded", event => {
+window.addEventListener("DOMContentLoaded", () => {
   teams.map(person => {
     const personDOM = document.createElement("div");
     personDOM.classList.add("person");
