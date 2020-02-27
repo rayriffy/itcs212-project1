@@ -1,0 +1,34 @@
+@import './commons'
+
+.content
+  & > .flex
+    display flex
+    justify-content center
+    padding 20px 0 0 0
+    & > h1
+      text-align center
+      border-bottom 5px solid
+      getColor(theme, border-color)
+  & > .cardContain
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    padding-top 20px
+    & > .card
+      getColor(theme, background, true)
+      display flex
+      justify-content space-between
+      border-radius 20px
+      overflow hidden
+      @media (max-width: 860px)
+        flex-direction column-reverse
+        flex-wrap wrap
+      & > .text
+        padding 40px
+        width calc(50% - 80px)
+        @media (max-width: 860px)
+          width calc(100% - 80px)
+      & > .map > .frame
+        width 100%
+        height 100%
