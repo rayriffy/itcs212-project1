@@ -2,7 +2,7 @@
 
 .hidden
   display none
-  
+
 .content > .teams
   padding 20px 0 0 0
   & > .flex
@@ -19,12 +19,13 @@
     flex-wrap wrap
     padding-top 20px
     & > .person
-      width 32%
+      width calc(33% - 40px)
       padding 20px
-      @media screen and (max-width: 800px)
-        width 40%
-      @media screen and (max-width: 440px)
-        width 70%
+      @media (max-width: 1000px)
+        width calc(50% - 40px)
+      @media (max-width: 520px)
+        width calc(100% - 40px)
+        
       & > .card
         getShadow('xl')
         getColor(theme, background, true)

@@ -9,3 +9,19 @@
       text-align center
       border-bottom 5px solid
       getColor(theme, border-color)
+  & > .cardContain
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    padding-top 20px
+    & > .section
+      width calc(50% - 40px)
+      padding 20px
+      @media (max-width: 900px)
+        width 100%
+      & > .card
+        getColor(theme, background)
+        getColor(theme, color, true)
+        border-radius 20px
+        padding 20px
