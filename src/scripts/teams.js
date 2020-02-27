@@ -10,11 +10,11 @@ const teams = [
       twitter: "https://twitter.com/rayriffy",
       instagram: "https://instagram.com/r4yr1ffy",
       github: "https://github.com/rayriffy"
-    },
+    }
   },
   {
     key: "osh",
-    name: { 
+    name: {
       first: "Osh",
       last: "Narayan"
     },
@@ -22,18 +22,28 @@ const teams = [
       facebook: "https://www.facebook.com/oshlove1999",
       instagram: "https://www.instagram.com/o.s.h.o.s.h",
       github: "https://github.com/Osh19999"
-    },
+    }
   },
   {
     key: "neno",
-    name: { 
-      first: "nNNNN",
-      last: "Thana"
+    name: {
+      first: "Natchanon",
+      last: "Thanawaree"
     },
     social: {
-      facebook: "https://www.facebook.com/hommahninokung",
-    },
+      facebook: "https://www.facebook.com/hommahninokung"
+    }
   },
+  {
+    key: "pooh",
+    name: {
+      first: "Pumipat",
+      last: "Watanakulcharus"
+    },
+    social: {
+      facebook: "https://www.facebook.com/pooh.pumipat"
+    }
+  }
 ];
 
 window.addEventListener("DOMContentLoaded", () => {
